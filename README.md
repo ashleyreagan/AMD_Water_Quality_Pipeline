@@ -36,7 +36,7 @@ Each stage produces logged outputs and intermediate CSV/GeoPackage layers, store
 ---
 
 ## 🚀 Quick Start
-
+```
 git clone https://github.com/ashleyreagan/AMD_Water_Quality_Pipeline.git
 cd AMD_Water_Quality_Pipeline
 pip install -r requirements.txt
@@ -46,31 +46,31 @@ python src/00_download_clean_wqx.py --state PA --start 2010-01-01 --end 2025-01-
 - data/outputs/wqx_pa_sites_merged_AMD_features.csv  
 - data/outputs/wqx_pa_sites_merged_AMDsubset_param_summary.csv  
 - data/outputs/wqp_mine_summary_stats.csv  
-
+```
 ---
 
 ## 🗺️ Example Workflow
 
 # 1. Download WQP data
-python src/00_download_clean_wqx.py --huc8 05050003
+```python src/00_download_clean_wqx.py --huc8 05050003```
 
 # 2. Clean & standardize parameters
-python src/amd_cleaner.py
+```python src/amd_cleaner.py```
 
 # 3. Join with AMLIS and mine-map data
-python src/mine_join_pipeline.py
+```python src/mine_join_pipeline.py```
 
 # 4. Generate watershed-level summaries
-python src/watershed_stats.py
+```python src/watershed_stats.py```
 
 # 5. Visualize results or launch dashboard
-python src/pa11_visualize.py
-streamlit run src/pa13_dashboard.py
+```python src/pa11_visualize.py```
+```streamlit run src/pa13_dashboard.py```
 
 ---
 
 ## 🧠 Repository Structure
-
+```
 AMD_Water_Quality_Pipeline/
 ├─ src/
 │   ├─ 00_download_clean_wqx.py         # WQP data ingestion
@@ -94,7 +94,7 @@ AMD_Water_Quality_Pipeline/
 ├─ requirements.txt
 ├─ .gitignore
 └─ LICENSE
-
+```
 ---
 
 ## 📊 Data Sources
